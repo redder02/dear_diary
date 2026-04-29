@@ -1,11 +1,11 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #f9fafb;
-    color: #111;
+    background: #f3f4f6;
+    color: #1f2937;
 }
 
-/* Center layout */
+/* Center screens */
 .center {
     display: flex;
     height: 100vh;
@@ -13,14 +13,14 @@ body {
     align-items: center;
 }
 
-/* Card (login/new) */
+/* Card */
 .card {
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 18px;
+    width: 92%;
+    max-width: 380px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
 
 /* Inputs */
@@ -31,6 +31,11 @@ input, textarea {
     border-radius: 10px;
     border: 1px solid #e5e7eb;
     font-size: 14px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #9ca3af;
 }
 
 /* Button */
@@ -38,7 +43,7 @@ button {
     width: 100%;
     margin-top: 18px;
     padding: 12px;
-    background: #111;
+    background: #111827;
     color: white;
     border: none;
     border-radius: 10px;
@@ -47,14 +52,21 @@ button {
 }
 
 button:hover {
-    opacity: 0.9;
+    background: #000;
 }
 
-/* Container */
+/* Links */
+a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 13px;
+}
+
+/* Dashboard container */
 .container {
-    max-width: 720px;
+    max-width: 680px;
     margin: auto;
-    padding: 20px;
+    padding: 16px;
 }
 
 /* Topbar */
@@ -62,29 +74,22 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .topbar h2 {
     margin: 0;
+    font-weight: 600;
 }
 
-/* Links */
-a {
-    text-decoration: none;
-    color: #111;
-    margin-left: 15px;
-    font-size: 14px;
-}
-
-/* Entry card */
+/* Entry cards */
 .entry {
-    background: white;
-    padding: 18px;
-    margin-top: 15px;
+    background: #ffffff;
+    padding: 16px;
+    margin-top: 14px;
     border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    transition: transform 0.15s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    transition: 0.2s ease;
 }
 
 .entry:hover {
@@ -99,15 +104,19 @@ a {
 }
 
 /* Content */
-.entry div:last-child {
-    font-size: 15px;
-    line-height: 1.5;
+.content {
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-/* Mobile responsiveness */
+/* Mobile */
 @media (max-width: 600px) {
+    .card {
+        padding: 22px;
+    }
+
     .container {
-        padding: 15px;
+        padding: 12px;
     }
 
     .entry {
